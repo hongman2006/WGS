@@ -1,3 +1,0 @@
-#!/bin/sh
-filepre=85.chr1-18.Sscrofa11.1.SNP.filtered.PASS
-raxmlHPC-PTHREADS-SSE3 -T 40  -x 12345 -p 12345 -k -# 100 -o ERR2984771  -m GTRGAMMA -s $filepre.fa -f a -n $filepre.nobt.tre  
