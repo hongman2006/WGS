@@ -2,9 +2,9 @@
 INWD=/project-whj/zhuqy/20230814_bannajjx/38samples-NGS-data/06vcf_ld
 OUTWD=/project-whj/zhuqy/20230814_bannajjx/38samples-NGS-data/06vcf_admixture
 filename=85-82.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz
-# plink   --allow-extra-chr  -bfile  $INWD/${filename}  --indep-pairwise  50 25 0.2 --chr-set 18 --out ld.${filename}-502502  --double-id
-# plink  --allow-extra-chr   --chr-set 18  -bfile   $INWD/${filename}  --extract  ld.${filename}-502502.prune.in  --make-bed --out  ld.${filename}-502502 --double-id
-# plink  --allow-extra-chr --chr-set 18  -bfile  ld.${filename}-502502  --geno 0.2   --make-bed --out  ld.QC.${filename}-502502-geno02  --double-id #  --geno 0.2 > 20% 
+plink  --allow-extra-chr  -bfile  $INWD/${filename}  --indep-pairwise  50 25 0.2 --chr-set 18 --out ld.${filename}-502502  --double-id
+plink  --allow-extra-chr   --chr-set 18  -bfile   $INWD/${filename}  --extract  ld.${filename}-502502.prune.in  --make-bed --out  ld.${filename}-502502 --double-id
+plink  --allow-extra-chr --chr-set 18  -bfile  ld.${filename}-502502  --geno 0.2   --make-bed --out  ld.QC.${filename}-502502-geno02  --double-id #  --geno 0.2 > 20% 
 
 for num in $(shuf -i 1-99999 -n 10) 
 do
