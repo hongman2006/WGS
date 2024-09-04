@@ -14,9 +14,9 @@ do
 echo `date`
 #trimmomatic PE -threads 1 -phred33 ${WD1}${SRA}_1.clean.fq.gz ${WD1}${SRA}_2.clean.fq.gz ${WD2}${SRA}_1.paired.fastq.gz ${WD2}${SRA}_1.unpaired.fastq.gz ${WD2}${SRA}_2.paired.fastq.gz ${WD2}${SRA}_2.unpaired.fastq.gz LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 
 ## map paired
-bwa mem -t 10 -M -R  "@RG\tID:${SRA}\tLB:${SRA}\tPL:ILLUMINA\tSM:${SRA}" ${REF} ${WD2}${SRA}_1.paired.fastq.gz ${WD2}${SRA}_2.paired.fastq.gz | samtools view -bS -o ${WD2}${SRA}.pe.bam
+bwa mem -t 2 -M -R  "@RG\tID:${SRA}\tLB:${SRA}\tPL:ILLUMINA\tSM:${SRA}" ${REF} ${WD2}${SRA}_1.paired.fastq.gz ${WD2}${SRA}_2.paired.fastq.gz | samtools view -bS -o ${WD2}${SRA}.pe.bam
 cat ${WD2}${SRA}_1.unpaired.fastq.gz ${WD2}${SRA}_2.unpaired.fastq.gz >${WD2}${SRA}.se.fastq.gz
-bwa mem -t 10 -M -R  "@RG\tID:${SRA}\tLB:${SRA}\tPL:ILLUMINA\tSM:${SRA}" ${REF} ${WD2}${SRA}.se.fastq.gz  | samtools view -bS -o ${WD2}${SRA}.se.bam
+bwa mem -t 2 -M -R  "@RG\tID:${SRA}\tLB:${SRA}\tPL:ILLUMINA\tSM:${SRA}" ${REF} ${WD2}${SRA}.se.fastq.gz  | samtools view -bS -o ${WD2}${SRA}.se.bam
 
 # rm ${WD2}${SRA}_1.paired.fastq.gz ${WD2}${SRA}_2.paired.fastq.gz
 # rm ${WD2}${SRA}_1.unpaired.fastq.gz ${WD2}${SRA}_2.unpaired.fastq.gz 
