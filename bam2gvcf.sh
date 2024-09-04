@@ -13,7 +13,7 @@ cd ${WD3}
 cp ${WD}chr.list ${WD3}
 for sample in `ls ${WD2}*.sus_scrofa.merge.sort.dedup.bam | cut -d "/" -f10 | cut -d "." -f1`
 do
-mkdir ${sample} #注意替换样本名
+mkdir ${sample} 
 for SRA in `cat chr.list`
 do
 
