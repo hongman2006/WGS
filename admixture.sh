@@ -31,7 +31,17 @@ ggsave(filename="cv.png")' >cv_script.R
 
 Rscript cv_script.R
 done
+#
+for y in {1..10}
+do
+rm -R  K-$y
+mkdir K-$y
+for i in 17201 8380 21298 2999 32719 35152 36385 49012 57087 82037
+do
 
+cp $i/ld.QC.85-82.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz-502502-geno02.$y.Q K-$y/$i-ld.QC.85-82.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz-502502-geno02.$y.Q 
+done
+done
 ##
 source activate Perl5
 
