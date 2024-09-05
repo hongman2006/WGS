@@ -2,7 +2,7 @@
 PopLDdecay=/projects/whj-chenhm/bin/PopLDdecay/bin/PopLDdecay
 WD=/home/whj-chenhm/inbred/06vcf_ld
 IPWD=/home/whj-chenhm/inbred/05vcfnew
-file=85-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz
+file=84-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz
 listWD=/home/whj-chenhm/inbred/06vcf_diannan_banna
 
 for sub in `ls $listWD/*.list | grep -v UNBN.list | grep -v BN.list | grep -v DNBN.list | grep -v sample.list | xargs -I {} basename {} `
