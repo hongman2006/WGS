@@ -4,9 +4,9 @@ WD65=$WD6/bethshapiro
 mkdir ${WD65} 
 #/project-whj/chm/pig/labdata/yaqi_vcf/final_rawVariant.vcf.gz
 cd $WD6
-geno=85.1_18.SNP.filtered.PASS.vcf.gz
-geno2=85.1_18.SNP.filtered.PASS.novariants.vcf.gz
-geno3=85-82.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz
+geno=84.1_18.SNP.filtered.PASS.vcf.gz
+geno2=84.1_18.SNP.filtered.PASS.novariants.vcf.gz
+geno3=84-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz
 for K in  $geno $geno2
 do 
 {
