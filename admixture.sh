@@ -1,7 +1,7 @@
 #!/bin/sh
 INWD=/project-whj/zhuqy/20230814_bannajjx/38samples-NGS-data/06vcf_ld
 OUTWD=/project-whj/zhuqy/20230814_bannajjx/38samples-NGS-data/06vcf_admixture
-filename=85-82.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz
+filename=84-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz
 plink  --allow-extra-chr  -bfile  $INWD/${filename}  --indep-pairwise  50 25 0.2 --chr-set 18 --out ld.${filename}-502502  --double-id
 plink  --allow-extra-chr   --chr-set 18  -bfile   $INWD/${filename}  --extract  ld.${filename}-502502.prune.in  --make-bed --out  ld.${filename}-502502 --double-id
 plink  --allow-extra-chr --chr-set 18  -bfile  ld.${filename}-502502  --geno 0.2   --make-bed --out  ld.QC.${filename}-502502-geno02  --double-id #  --geno 0.2 > 20% 
@@ -50,7 +50,7 @@ mkdir K-$y
 for i in 17201 8380 21298 2999 32719 35152 36385 49012 57087 82037
 do
 
-cp $i/ld.QC.85-82.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz-502502-geno02.$y.Q K-$y/$i-ld.QC.85-82.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz-502502-geno02.$y.Q
+cp $i/ld.QC.84-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz-502502-geno02.$y.Q K-$y/$i-ld.QC.84-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz-502502-geno02.$y.Q
 done
 done
 
@@ -65,7 +65,7 @@ perl /home/wangms/00.software/CLUMPAK/CLUMPAK/CLUMPAK.pl --id 2 --dir K-1-CLUMPA
 step 4. 
 for i in {1..10}
 do
-cat K-1-CLUMPAK-result/2/K=${i}/CLUMPP.files/ClumppIndFile.output | cut -d ":" -f 2 | sed 's/^ *//g' >CLUMP.ld.QC.85-82.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz-502502-geno02.${i}.Q
+cat K-1-CLUMPAK-result/2/K=${i}/CLUMPP.files/ClumppIndFile.output | cut -d ":" -f 2 | sed 's/^ *//g' >CLUMP.ld.QC.84-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz-502502-geno02.${i}.Q
 #mv CLUMP.152RJF_693dom.mv3.no3.autos.withMinor_prunedData_pairwise.${i}.Q CLUMP.noGGB.152RJF_693dom.mv3.no3.autos.withMinor_prunedData_pairwise.${i}.Q
 done
 
