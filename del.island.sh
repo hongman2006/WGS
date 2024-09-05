@@ -1,4 +1,4 @@
-provean=/home/whj-chenhm/inbred/06vcf_annovar/annovar/provean/PROVEAN.85-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.tab
+provean=/home/whj-chenhm/inbred/06vcf_annovar/annovar/provean/PROVEAN.84-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.tab
 num=$(awk '{print NF ;exit}' $provean)
 for i in $(seq 4 $num)
 do
@@ -56,7 +56,7 @@ cat *.deleterious.roh.segment.list.result > deleterious.roh.segment.result
 
 
 # 
-provean=/home/whj-chenhm/inbred/06vcf_annovar/annovar/provean/PROVEAN.85-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.tab
+provean=/home/whj-chenhm/inbred/06vcf_annovar/annovar/provean/PROVEAN.84-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.tab
 num=$(awk '{print NF ;exit}' $provean)
 for i in $(seq 4 $num)
 do
@@ -104,7 +104,7 @@ touch head | echo "sample   chr    start    end    het.num  length(Mb)" > head
 cat head *.deleterious.roh.het.segment.list.het.result > deleterious.roh.segment.het.result
 
 # 
-provean=/home/whj-chenhm/inbred/06vcf_annovar/annovar/provean/PROVEAN.85-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.tab
+provean=/home/whj-chenhm/inbred/06vcf_annovar/annovar/provean/PROVEAN.84-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.tab
 num=$(awk '{print NF ;exit}' $provean)
 for i in $(seq 4 $num)
 do
