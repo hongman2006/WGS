@@ -1,5 +1,5 @@
 #!/bin/sh
-filename=85-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz
+filename=84-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz
 WD=/projects/whj-chenhm/pig/labdata/05vcfnew/
 WD6=/projects/whj-chenhm/pig/labdata/06vcf_pca/
 gcta64=/projects/whj-chenhm/bin/gcta_1.94.0beta/gcta64
