@@ -1,5 +1,5 @@
 WD=/projects/whj-chenhm/pig/labdata/05vcfnew
-filename=85-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz
+filename=84-81.1_18.SNP.filtered.PASS.novariants.cluster.windows.wms.vcf.gz
 WD6=/projects/whj-chenhm/pig/labdata/06vcf_diversity/
 INWD=/projects/whj-chenhm/pig/labdata/06vcf_diannan_banna
 mkdir $WD6 
