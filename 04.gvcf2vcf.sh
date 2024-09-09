@@ -50,10 +50,6 @@ if [ ! -s "${OUT}.SNP.vcf.gz.tbi" ]; then
     gatk --java-options "-Xmx${maxmem}g" SelectVariants -R ${REF} -V ${filename} -select-type SNP -O ${OUT}.SNP.vcf.gz
 fi
 
-if [ ! -s "${OUT}.INDEL.vcf.gz.tbi" ]; then
-    gatk --java-options "-Xmx${maxmem}g" SelectVariants -R ${REF} -V ${filename} -select-type INDEL -O ${OUT}.INDEL.vcf.gz
-fi
-
 #       --filterExpression "QUAL < 50.0 && QUAL >= 30.0" --filterName "QUAL_lt50_gt30"
 if [ ! -s "${OUT}.SNP.filtered.vcf.gz.tbi" ]; then
    gatk --java-options "-Xmx${maxmem}g" VariantFiltration \
